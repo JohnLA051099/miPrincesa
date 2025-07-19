@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>❤️ Feliz 6 Meses Princesa ❤️</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to bottom, #ffe0ec, #fcb5c3);
+      overflow: hidden;
+    }
+
+    #login {
+      position: absolute;
+      width: 100%;
+      height: 100vh;
+      background: rgba(0,0,0,0.6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      z-index: 10;
+    }
+
+    #login h2 {
+      color: white;
+      margin-bottom: 20px;
+      font-size: 28px;
+    }
+
+    #login input {
+      padding: 12px;
+      font-size: 22px;
+      border-radius: 12px;
+      border: none;
+      text-align: center;
+      outline: none;
+    }
+
+    #login button {
+      margin-top: 15px;
+      padding: 12px 28px;
+      font-size: 18px;
+      border: none;
+      border-radius: 12px;
+      background-color: #ff4f81;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    #login button:hover {
+      background-color: #e8436f;
+    }
+
+    .seccion {
+      display: none;
+      padding: 30px;
+      animation: fadeIn 2s ease-in-out;
+      color: #fff;
+      text-align: center;
+    }
+
+    #contenido {
+      overflow-y: auto;
+      height: 100vh;
+      scroll-behavior: smooth;
+    }
+
+    h1, h2 {
+      font-family: 'Pacifico', cursive;
+    }
+
+    p {
+      font-size: 20px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .corazon {
+      font-size: 48px;
+      animation: heartbeat 1.5s infinite;
+      margin: 20px 0;
+    }
+
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.3); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .fondo-flotante {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1;
+    }
+
+    .corazon-flotante {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background: red;
+      clip-path: polygon(50% 0%, 100% 30%, 80% 100%, 50% 80%, 20% 100%, 0% 30%);
+      opacity: 0.4;
+      animation: flotar 10s linear infinite;
+    }
+
+    @keyframes flotar {
+      0% { transform: translateY(100vh) scale(1); opacity: 0.3; }
+      100% { transform: translateY(-10vh) scale(1.5); opacity: 0; }
+    }
+
+    .galeria {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px;
+  /* Para ocultar la barra de scroll en algunos navegadores, opcional: */
+  -ms-overflow-style: none;  /* IE y Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.galeria::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari y Opera */
+}
+
+.galeria img,
+.galeria video {
+  flex: 0 0 auto; /* Para que no se reduzcan y estén en fila */
+  width: 200px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.4s ease;
+}
+
+.galeria img:hover,
+.galeria video:hover {
+  transform: scale(1.1) rotate(-2deg);
+}
+
+    .video-container {
+      margin-top: 20px;
+    }
+
+    .video-container iframe {
+      width: 90%;
+      max-width: 600px;
+      height: 315px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="fondo-flotante">
+    <div class="corazon-flotante" style="left: 10%; animation-delay: 0s;"></div>
+    <div class="corazon-flotante" style="left: 30%; animation-delay: 2s;"></div>
+    <div class="corazon-flotante" style="left: 50%; animation-delay: 4s;"></div>
+    <div class="corazon-flotante" style="left: 70%; animation-delay: 1s;"></div>
+    <div class="corazon-flotante" style="left: 90%; animation-delay: 3s;"></div>
+  </div>
+
+  <div id="login">
+    <h2>💗 Ingresa el código secreto 💗</h2>
+    <input type="password" id="codigo" placeholder="Código...">
+    <button onclick="verificarCodigo()">Entrar</button>
+  </div>
+
+  <div id="contenido">
+    <section class="seccion" id="inicio">
+      <h1>¡Feliz 6 Meses, Mi Princesa Hermosa! 🥰</h1>
+      <p class="corazon">❤️</p>
+      <p>El día de hoy celebramos medio año de novios. Recuerdo nuestro primer día, lleno de nervios, cuando me animé a declararme al amor de mi vida.</p>
+      <p>El 19 de enero fue el inicio de nuestra hermosa historia, y desde entonces cada día a tu lado ha sido un regalo que nunca imaginé.</p>
+<img src="foto1.jpeg" alt="Nosotros 1" style="display: block; margin: 20px auto; max-width: 90%; border-radius: 12px;">
+
+    </section>
+
+    <section class="seccion" id="momentos">
+      <h2>Nuestros Momentos ✨</h2>
+<p>Quiero decirte que cada momento a tu lado me llena de felicidad.</p>
+<p>Cada beso, cada abrazo, hacen que me sienta en paz, porque en esos instantes solo existimos tú y yo 🤍.
+Deseo seguir construyendo muchos más momentos hermosos contigo, mi vida, hoy y siempre 🥰.</p>
+   <div class="galeria">
+  <img src="foto2.jpeg" alt="Nosotros 1">
+  <video autoplay loop muted playsinline controls>
+    <source src="video1.mp4" type="video/mp4">
+  </video>
+  <img src="foto3.jpeg" alt="Nosotros 3">
+    <video autoplay loop muted playsinline controls>
+    <source src="video3.mp4" type="video/mp4">
+  </video>
+  <img src="foto4.jpeg" alt="Nosotros 4">
+      <video autoplay loop muted playsinline controls>
+    <source src="video5.mp4" type="video/mp4">
+  </video>
+</div>
+    </section>
+
+    <section class="seccion" id="promesa">
+      <h2>Mi Promesa para Ti 💍</h2>
+      <p>Te prometo que siempre estaré para ti, mi niña hermosa.</p>
+<p>Quiero ser el mejor hombre que puedas tener, porque tú mereces lo mejor de mí y mucho más. Siempre cuidaré de ti, estaré a tu lado en los buenos momentos, en los malos, y hasta en los peores. Nunca estarás sola, porque mi amor por ti es tan grande y sincero. 🤍</p>
+            <div class="galeria">
+      <video autoplay loop muted playsinline controls style="display: block; margin: 20px auto; max-width: 90%; border-radius: 12px;">
+    <source src="videos4.mp4" type="video/mp4">
+  </video>
+</div>
+    </section>
+
+    <section class="seccion" id="gracias">
+      <h2>Gracias por Existir 💖</h2>
+<p>Te agradezco, mi cielo, por estar a mi lado. Gracias por comprenderme, por ser tan linda, por tus caricias, por darme paz y por iluminar mis días. Quiero que sepas que, desde que llegaste, mi vida tiene mucho más color. 🤍</p>
+<p>🥰🥰¡TE AMOOO DE AQUÍ HASTA EL INFINITO Y MÁS ALLÁ, EN PASITOS DE TORTUGA… Y DE REGRESO EN PASITOS DE CARACOL! 🥰🥰</p>
+      <div class="video-container" >
+
+              <video autoplay loop muted playsinline controls style="display: block; margin: 20px auto; max-width: 90%; border-radius: 12px;">
+    <source src="video6.mp4" type="video/mp4">
+  </video>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    function verificarCodigo() {
+      const codigo = document.getElementById('codigo').value;
+      if (codigo === '1901') {
+        document.getElementById('login').style.display = 'none';
+        document.querySelectorAll('.seccion').forEach(sec => {
+          sec.style.display = 'block';
+        });
+      } else {
+         alert('¡EN QUIÉN PIENSAS, PRECIOSAAAAAAA 🫵!');
+      }
+    }
+  </script>
+
+</body>
+</html>
